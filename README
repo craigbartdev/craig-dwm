@@ -43,7 +43,7 @@ git clone git://git.suckless.org/dmenu
 cd dmenu
 sudo make clean install
 cd /usr/local
-git clone git://git.suckless.org/st
+git clone git://git.suckless.org/st  (or clone my version: git clone https://github.com/craigbartdev/craig-st)
 cd st
 sudo make clean install
 cd /usr/local
