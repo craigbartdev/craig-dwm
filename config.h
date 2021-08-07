@@ -140,6 +140,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      spawn,          SHCMD("qjackctl") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st -e pulsemixer") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("blueman-manager") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("pystopwatch") },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pulsemixer --toggle-mute") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pulsemixer --change-volume +3") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pulsemixer --change-volume -3") },
