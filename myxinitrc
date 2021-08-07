@@ -1,0 +1,10 @@
+xcompmgr &
+xbacklight = 70 &
+while true; do
+	xsetroot -name " $(cat /sys/class/net/wlp3s0/operstate) | $(pactl list sinks | grep '^[[:space:]]Volume:' | \
+    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')% | $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp) | $(df -h | awk '{ if ($6 == "/home") print $4 }') |  $(cat /sys/class/power_supply/BAT0/capacity)% | $(date '+%a %D %I:%M%p %Z')"
+	sleep 5s
+done &
+sh ~/.screenlayout/hdmi1080p.sh &
+sh ~/.fehbg &
+exec dwm

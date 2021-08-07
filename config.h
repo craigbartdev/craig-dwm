@@ -10,7 +10,7 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "libertine:size=12", "notoserifcjkjp:size=11" };
+static const char *fonts[]          = { "libertine:size=12", "notoserif:size=12", "notoserifcjkjp:size=11" };
 static const char dmenufont[]       = "libertine:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -135,9 +135,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("arandr") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("st -e mocp") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vscodium") },
-	{ MODKEY,                       XK_i,      spawn,          SHCMD("pcmanfm") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("pcmanfm") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("reaper") },
 	{ MODKEY,                       XK_q,      spawn,          SHCMD("qjackctl") },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st -e pulsemixer") },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("blueman-manager") },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pulsemixer --toggle-mute") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pulsemixer --change-volume +3") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pulsemixer --change-volume -3") },

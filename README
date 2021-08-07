@@ -1,3 +1,113 @@
+craig-dwm repo
+My personal configuration of dwm.
+Instructions for Arch-based linux distros
+
+These are just my preferred programs, patches, and configurations. Add or remove whatever you want on your own machine.
+
+Installation (view required suckless and arch packages further down to get full features)
+in /usr/local directory:
+git clone https://github.com/craigbartdev/craig-dwm
+cd craig-dwm
+sudo make clean install
+
+After copying .xinitrc and installing xorg (instructions further down):
+startx
+
+All keybindings listed after line 90 of config.def.h
+
+Change DWM Config (if you want to)
+Backup the config:
+cp config.def.h config.def.h.bak
+
+Make changes in config.def.h in text editor:
+vim config.def.h
+
+copy to config.h:
+cp config.def.h config.h
+
+build:
+sudo make install
+
+
+REQUIREMENTS
+
+My .bashrc and .xinitrc packages. These will give you my bash aliases, status bar, and more:
+cd /usr/local/craig-dwm
+cp mybashrc ~/.bashrc
+cp myxinitrc ~/.xinitrc
+
+
+Required/helpful suckless packages installation:
+cd /usr/local
+git clone git://git.suckless.org/dmenu
+cd dmenu
+sudo make clean install
+cd /usr/local
+git clone git://git.suckless.org/st
+cd st
+sudo make clean install
+cd /usr/local
+git clone git://git.suckless.org/scroll
+cd scroll
+sudo make clean install
+
+
+Required pacman and AUR packages (these are used in config.h, .xinitrc, and .bashrc):
+
+Install xorg:
+pacman -S xorg xorg-backlight
+
+Install yay (or can install paru from AUR):
+pacman -S yay
+
+Install vim:
+pamcan -S vim
+
+Install the following font packages (commands for arch based distros):
+pacman -S ttf-linux-libertine ttf-dejavu noto-fonts-cjk
+
+Install the following file managers (command line and gui):
+pacman -S ranger pcmanfm
+
+Install the following audio packages:
+pacman -S pulseaudio pulseaudio-alsa pulseaudio-jack pulseaudio-bluetooth
+
+Install the following bluetooth packages:
+pacman -S bluez bluez-utils blueman
+
+Install the following image viewers (feh for wallpapers, sxiv for images and gifs):
+pacman -S sxiv feh
+
+Install Firefox:
+pacman -S firefox
+
+Install Arandr (configure multimonitor setups easily):
+pacman -S arandr
+
+Install VSCodium (libre version of VS Code):
+yay -S vscodium-bin vscodium-bin-features vscodium-bin-marketplace
+
+Install Reaper DAW:
+yay -S reaper-bin
+
+Install JACK audio and tools:
+yay -S jack2 pulseaudio-jack qjackctl a2jmidid
+
+Install MOC music player:
+yay -S moc-pulse
+
+Install pfetch:
+pacman -S pfetch
+
+Install pystopwatch
+yay -S pystopwatch
+
+Now bash aliases, keybindings, and status bar should work. 
+Look online for how to properly configure reaper-bin, qjackctl, feh, and moc-pulse, or switch them out for your preferred programs.
+
+
+
+Original dwm README from suckless:
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.

@@ -1,0 +1,20 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# alias ls='ls --color=auto'
+export PS1='\[\e[35m\][\[\e[m\]\[\e[1;34m\]\u\[\e[m\]\[\e[35m\]@\[\e[m\]\[\e[1;34m\]\h\[\e[1;35m\]:\[\e[1;35m\]\w\[\e[m\]\[\e[35m\]]\[\e[m\]\[\e[1;34m\]\\$\[\e[m\] '
+alias code="vscodium"
+alias midi="a2jmidid -e"
+alias sxiv="sxiv -a"
+alias pacman="sudo pacman"
+alias reboot="sudo reboot"
+alias poweroff="sudo poweroff"
+alias vim="sudo vim"
+alias empty="rm -r ~/.local/share/Trash/files/* & rm -r ~/.local/share/Trash/info/*"
+alias hdmi="sh ~/.screenlayout/hdmi1080p.sh & sh ~/.fehbg"
+alias onlyhdmi="sh ~/.screenlayout/onlyhdmi1080p.sh & sh ~/.fehbg"
+pfetch
