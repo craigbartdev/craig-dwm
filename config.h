@@ -134,7 +134,7 @@ static Key keys[] = {
 	{ MODKEY,             		XK_s, 	   shiftview,      {.i = +1 } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
-	{ MODKEY,                       XK_r,      spawn,          SHCMD("st -e ranger") },
+	{ MODKEY,                       XK_r,      spawn,          SHCMD("st -e lf") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("arandr") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("st -e mocp") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vscodium") },
