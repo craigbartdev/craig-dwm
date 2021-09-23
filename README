@@ -67,7 +67,7 @@ Install the following font packages (commands for arch based distros):
 pacman -S ttf-linux-libertine ttf-dejavu noto-fonts-cjk
 
 Install the following file managers (command line and gui):
-pacman -S ranger pcmanfm
+pacman -S ranger pcmanfm-gtk3
 
 Install the following audio packages:
 pacman -S pulseaudio pulseaudio-alsa pulseaudio-jack pulseaudio-bluetooth
@@ -99,8 +99,8 @@ yay -S moc-pulse
 Install pfetch:
 pacman -S pfetch
 
-Install pystopwatch
-yay -S pystopwatch
+Install pomotroid (pomodoro timer)
+yay -S pomotroid
 
 Now bash aliases, keybindings, and status bar should work. 
 Look online for how to properly configure reaper-bin, qjackctl, feh, and moc-pulse, or switch them out for your preferred programs.
