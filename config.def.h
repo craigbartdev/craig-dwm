@@ -140,7 +140,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vscodium") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("pcmanfm") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("reaper") },
-	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("cadence") },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("cadence") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st -e pulsemixer") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("blueman-manager") },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("pomotroid") },
