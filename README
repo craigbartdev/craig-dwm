@@ -91,7 +91,7 @@ Install Reaper DAW:
 yay -S reaper-bin
 
 Install JACK audio and tools:
-yay -S jack2 pulseaudio-jack qjackctl a2jmidid
+yay -S jack2 pulseaudio-jack cadence a2jmidid
 
 Install MOC music player:
 yay -S moc-pulse
